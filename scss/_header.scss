@@ -65,6 +65,7 @@ nav {
         display: none;
         flex-grow: 1;
         width: 100%;
+        transition: 2s;
         ul {
             flex-direction: column;
             border: 1px solid $bg-gray;
