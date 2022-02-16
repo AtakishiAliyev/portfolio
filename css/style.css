@@ -940,6 +940,118 @@ nav .container {
   }
 }
 
+.portfolio__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px -10px 0;
+}
+
+.portfolio__block-item {
+  width: calc(100% / 3);
+  padding: 10px;
+}
+
+.portfolio__block-item .box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portfolio__block-item .box .image img {
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+
+.portfolio__block-item .box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 10, 12, 0.5);
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+  opacity: 0;
+}
+
+.portfolio__block-item .box .text h5 {
+  position: relative;
+  left: -25px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 0 10px;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+
+.portfolio__block-item .box .text span {
+  position: relative;
+  left: -25px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 2px 12px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+
+.portfolio__block-item .box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.portfolio__block-item .box:hover .text {
+  opacity: 1;
+}
+
+.portfolio__block-item .box:hover .text h5,
+.portfolio__block-item .box:hover .text span {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio__block-item {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio__block-item {
+    width: 100%;
+  }
+}
+
 footer {
   background-color: #090a0c;
 }
